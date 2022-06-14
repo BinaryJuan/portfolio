@@ -1,0 +1,76 @@
+// Form media responsive
+@media (min-width: 1025px) and (max-width: 1630px) {
+    .contactMe form input {
+        width: 18vw;
+    }
+}
+
+// Tablet media responsive
+@media (min-width: 600px) and (max-width: 1024px) {
+    div#presentation {
+        width: 80%;
+    }
+
+    div#progressBar {
+        height: 7px;
+    }
+
+    img#image {
+        width: 280px;
+        height: 280px;
+    }
+
+    div#code {
+        width: 100%;
+        max-width: 600px;
+        min-width: 400px;
+
+        p {
+            font-size: 1.3rem;
+        }
+    }
+
+    #code-container {
+        div {
+            font-size: 2rem;
+        }
+    }
+
+    #navbar ul li {
+        font-size: 1.2rem;
+    }
+
+    #portfolio {
+        max-height: none !important;
+    }
+
+    div.aboutMe p {
+        width: 100%;
+    }
+
+    div.infoGrid {
+        width: 80%;
+        grid-template-columns: 25vw 35vw;
+    }
+
+    div.mySkills .skillsFlex .skillDiv {
+        width: 150px;
+        height: 150px;
+
+        i {
+            font-size: 4.5rem;
+        }
+    }
+
+    div.contactMe form {
+        width: 100%;
+
+        textarea {
+            width: 50vw;
+        }
+    }
+
+    div.socials {
+        margin-bottom: 100px;
+    }
+}

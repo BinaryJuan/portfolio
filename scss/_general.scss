@@ -1,0 +1,584 @@
+/* _____RESET_____ */
+* {
+    margin:0;
+    padding:0;
+}
+/* _____RESET_____ */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    background-color: $color-html-back;
+    color: $color-text;
+    font-family: $font-family;
+    scroll-behavior: smooth;
+}
+
+section {
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+}
+
+#navbarMob {
+    display: none;
+}
+
+#presentation {
+    width: 70%;
+    background-color: $color-section;
+    margin: 150px auto 0 auto;
+    padding: 30px;
+    border-radius: 1.3rem;
+    box-shadow: -1px 0px 5px 2px rgba(0,0,0,0.14);
+
+    button {
+        color: $color-text-lighter;
+        background-color: $color-purple;
+        border-color: $color-purple;
+        text-shadow: none;
+        height: 60px;
+        width: 170px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        border-radius: 0.5rem;
+        border-style: outset;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    button:active {
+        background-color: $color-purple-darker;
+    }
+}
+
+#image {
+    width: 350px;
+    height: 350px;
+    border-radius: 100%;
+    margin-top: 60px;
+    padding: 3px;
+    user-select: none;
+    transition: all 2s;
+}
+
+#image:hover {
+    transform: scale(1.03, 1.03);
+}
+
+#code {
+    margin: 50px auto;
+    width: 50vw;
+    height: 200px;
+    border-radius: 1.3rem;
+    background-color: $color-code-back;
+    font-weight: bold;
+
+    p {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    p:last-child {
+        margin-top: 10px;
+    }
+}
+
+#code-container {
+    padding: 60px;
+    user-select: none;
+
+    div#codeName {
+        font-size: 2rem !important;
+    }
+
+    div#flickering {
+        font-size: 1.4rem;
+    }
+}
+
+.divSpan {
+    color: #3838f5;
+}
+
+.divString {
+    color: #9E541B;
+}
+
+.divClass {
+    color: #70AEFF;
+}
+
+#flickering {
+    font-size: 1.4rem;
+    text-align: left;
+    animation: flicker 1s infinite;
+}
+
+#codeOccupation {
+    font-size: 2.5rem;
+    color: $color-purple;
+}
+
+#portfolio {
+    width: 70%;
+    height: auto;
+    display: none;
+    max-height: 0px;
+    margin: 0 auto;
+    padding: 30px;
+    margin-top: 150px;
+}
+
+.infoGrid {
+    display: grid;
+    width: 53.4%;
+    justify-content: center;
+    height: auto;
+    margin: 25px auto;
+    grid-template-columns: 15vw 20vw;
+    grid-template-rows: repeat(5, auto);
+    margin-bottom: 80px;
+}
+
+.infoGridBox {
+    font-weight: bold;
+    color: white;
+    height: auto;
+    padding: 5px 20px;
+    border: 1px solid #464545;
+    font-size: 1rem;
+}
+
+.aboutMe {
+    text-align: center;
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+        width: 60%;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 30px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+}
+
+.mySkills {
+    text-align: center;
+
+    h3 {
+        font-size: 1.6rem;
+    }
+
+    .skillsFlex {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    i {
+        color: white;
+        font-size: 5rem;
+        cursor: pointer;
+        transition: all .1s;
+    }
+
+    i:hover {
+        font-size: 5.5rem;
+        color: $color-purple;
+    }
+
+    .skillsFlex .skillDiv {
+        background-color: $color-code-back;
+        width: 180px;
+        height: 180px;
+        border-radius: 1rem;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid transparent;
+    }
+
+    .skillDiv:hover {
+        border: 1px solid $color-purple;
+    }
+
+    .cv {
+        text-decoration: none;
+        color: white;
+        font-size: 1.3rem;
+        padding: 20px 30px;
+        border: 1px solid $color-purple;
+        border-radius: .7rem;
+        position: relative;
+        transition: .5s;
+    }
+
+    .cv:hover {
+        box-shadow: inset 0 0 0 2.5rem $color-purple;
+    }
+}
+
+.myPortfolio {
+    margin-top: 250px;
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+#projectsFlex {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    height: auto;
+    margin: 40px auto;
+    flex-wrap: wrap;
+}
+
+.projectBox {
+    width: 500px;
+    height: 300px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.imgCard {
+    transition: all 0.6s;
+    min-width: 500px;
+    border-radius: .6rem;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.imgCardFit {
+    object-fit: contain;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    transition: all 1s;
+    color: white;
+    text-align: center;
+    width: 500px;
+    height: 300px;
+    border: 1px solid white;
+    border-radius: .6rem;
+}
+
+.cardText {
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: all 0.5s;
+    user-select: none;
+    text-align: center;
+    border-bottom-left-radius: .6rem;
+    border-bottom-right-radius: .6rem;
+}
+
+.cardContent:hover .cardText {
+    opacity: 0.8;
+    background-color: $color-purple;
+    padding: 20px 0;
+}
+
+.cardContent:hover {
+    border: 1px solid $color-purple;
+}
+
+.projectBox:hover .imgCard {
+    opacity: 55%;
+}
+
+.title {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.websiteLink a {
+    color: white;
+    font-weight: bold;
+}
+
+.websiteLink a:hover {
+    color: rgb(46, 46, 46);
+    opacity: 75%;
+}
+
+#certificatesFlex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70vw;
+    height: auto;
+    margin: 0 auto 40px auto;
+    padding-bottom: 70px;
+}
+
+.certificateBox {
+    width: 500px;
+    height: 300px;
+    border: 1px solid white;
+    position: relative;
+    margin-top: 60px;
+    transition: all 1s;
+    padding: 2px;
+}
+
+.infoCheckbox {
+    display: none;
+}
+
+.infoCheckbox:checked ~ .infoBox {
+    visibility: visible;
+    opacity: 1;
+}
+
+.infoBox {
+    width: 550px;
+    height: 320px;
+    border: 1px solid $color-purple;
+    background-color: black;
+    position: absolute;
+    z-index: 10;
+    top: -10px;
+    left: -20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.6s;
+}
+
+.certificateBox img {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.certificateBox:hover .openModal {
+    opacity: 100%;
+    visibility: visible;
+    cursor: pointer;
+}
+
+.openModal:hover {
+    color: black;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+.certificateBox:hover {
+    border: 1px solid $color-purple;
+    opacity: 75%;
+}
+
+.infoBoxText {
+    color: white;
+    font-size: 1.3rem;
+    padding: 25px;
+    text-align: center;
+}
+
+.openCertificate a {
+    color: $color-purple;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.openCertificate a:hover {
+    opacity: 80%;
+}
+
+.closeInfo {
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 1.1rem;
+    text-decoration: underline;
+}
+
+.closeInfo:hover {
+    opacity: 80%;
+}
+
+.mediaContainer {
+    padding-bottom: 40px;
+    height: auto;
+    min-height: 250px;
+    margin-bottom: 100px;
+}
+
+.openModal {
+    color: white;
+    width: 95px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: $color-purple;
+    border-radius: 2rem;
+    padding: 5px 10px;
+    position: absolute;
+    text-align: center;
+    right: 1vw;
+    top: 250px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+    user-select: none;
+}
+
+.contactMe {
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    form {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $color-grey;
+        margin: 0 auto;
+        padding: 40px 0;
+        border-radius: 1.3rem;
+        height: 400px;
+        font-size: 1.3rem;
+        margin-top: 40px;
+    }
+
+    input {
+        width: 20vw;
+        height: 35px;
+        font-size: 1.3rem;
+        border-radius: .6rem;
+        background-color: #C4C4C4;
+        padding: 0 15px;
+        border: 3px solid transparent;
+    }
+
+    input::placeholder {
+        font: 1.2rem sans-serif;
+    }
+
+    input:focus {
+        outline: none;
+        border: 3px solid $color-purple;
+    }
+
+    .fBox {
+        width: 80%;
+    }
+
+    .peopleInfo {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    textarea {
+        width: 43vw;
+        height: auto;
+        min-height: 200px;
+        font-size: 1.2rem;
+        overflow: auto;
+        max-width: 100%;
+        cursor: text;
+        resize: none;
+        border-radius: .6rem;
+        background-color: #C4C4C4;
+        padding: 15px;
+        margin-top: 30px;
+        border: 3px solid transparent;
+    }
+
+    textarea::placeholder {
+        font: 1.2rem sans-serif;
+    }
+
+    textarea:focus {
+        outline: none;
+        border: 3px solid $color-purple;
+    }
+
+    .sendButton {
+        width: 150px;
+        height: 40px;
+        margin: 20px auto 0 auto;
+        cursor: pointer;
+        background-color: $color-purple;
+        border: none;
+        color: white;
+        font-weight: bold;
+        font-size: 1.3rem;
+        border-radius: .6rem;
+    }
+
+    .sendButton:active {
+        background-color: $color-purple-darker;
+    }
+}
+
+.socialsContainer {
+    margin-top: 60px;
+
+    h3 {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 300px;
+}
+
+.social {
+    background-color: $color-grey;
+    width: 400px;
+    height: 50px;
+    margin: 5px 0;
+    border-radius: .6rem;
+    transition: all .5s;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+
+    i {
+        font-size: 2rem;
+    }
+
+    a {
+        font-size: 1.2rem;
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+    }
+}
+
+.social:hover {
+    transform: scale(1.1, 1.1);
+    background-color: $color-grey-lighter;
+}

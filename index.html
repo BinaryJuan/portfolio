@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- H E A D -->
+    <head>
+        <!-- Meta -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <!-- SEO -->
+        <meta name="keywords" content="portfolio, dante, terranova, dante terranova, frontend, backend, full stack">
+        <meta name="description" content="¿Buscás una salida hacia la libertad? Sentí la extraordinaria esencia de un viaje en motocicleta y descubrí a tu verdadero yo."/>
+        <meta name="author" content="Dante Terranova">
+        <title>Dante Terranova | Web development</title>
+        <!-- Links -->
+        <link rel="shortcut icon" href="media/logo.ico" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </head>
+    <!-- H E A D -->
+    <!-- B O D Y -->
+    <body>
+        <!-- Navbar -->
+        <nav id="navbar" class="bolder all-width">
+            <ul>
+                <li id="home"><a href="#presentation">Home</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#projects">Portfolio</a></li>
+                <li><a class="hover-black" href="#contact">Contact me</a></li>
+            </ul>
+            <div id="progressBar"></div>
+        </nav>
+        <nav id="navbarMob">
+            <input type="checkbox" id="menuMod" />
+            <label for="menuMod" class="menuModLabel"><i class="fa-solid fa-bars"></i></label>
+            <ul class="navbarMobContent">
+                <li id="home"><a href="#presentation">HOME</a></li>
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#projects">PORTFOLIO</a></li>
+                <li><a class="hover-black" href="#contact">CONTACT ME</a></li>
+            </ul>
+        </nav>
+        <!-- Navbar -->
+        <!-- Main -->
+        <main>
+            <section>
+                <div id="presentation">
+                    <img id="image" title="Dante Terranova" data-aos="fade-zoom-in" data-aos-duration="2700" data-aos-once="true" src="media/default.jpg" alt="dante">
+                    <div id="code">
+                        <div id="code-container">
+                            <p>&lt<span class="divSpan">div</span><span class="divClass"> class</span>=<span class="divString">”name”</span>>I’m Dante&gt&lt/<span class="divSpan">div</span>&gt</p>
+                            <p>&lt<span class="divSpan">div</span><span class="divClass"> class</span>=<span class="divString">”occupation”</span>&gtFull-stack developer&lt/<span class="divSpan">div</span>&gt</p>
+                            <div id="flickering">|</div>
+                        </div>
+                    </div>
+                    <button title="Try me!" id="runButton">Run code</button>
+                </div>
+            </section>
+            <section id="portfolio">
+                <div class="aboutMe" id="about">
+                    <h2>Who am i?</h2>
+                    <p>
+                        My name is Dante Terranova, i am a 21 year old who is passionate
+                        for the IT field, more specifically in the website development area
+                        as a full-stack developer. My main knowledge encompasses both
+                        Frontend and Backend, although i am an 'always learning' individual.
+                        My native language is Spanish, but i have an advanced level of English
+                        which makes me able to communicate efficiently.
+                    </p>
+                    <div class="infoGridContainer">
+                        <div class="infoGrid">
+                            <div class="infoGridBox left light">Name</div>
+                            <div class="infoGridBox right lighter border-sub">Dante J. Terranova</div>
+                            <div class="infoGridBox left light">Nationality</div>
+                            <div class="infoGridBox right lighter border-sub">Argentina</div>
+                            <div class="infoGridBox left light">Age</div>
+                            <div class="infoGridBox right lighter border-sub">21</div>
+                            <div class="infoGridBox left light">Languages</div>
+                            <div class="infoGridBox right lighter border-sub">Spanish / English</div>
+                            <div class="infoGridBox left light">English level</div>
+                            <div class="infoGridBox right lighter border-sub">C1 Advanced</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySkills">
+                    <h3>Main skills</h3>
+                    <div class="skillsFlex">
+                        <div class="skillDiv"><i class="fa-brands fa-html5" title="HTML5"></i></div>
+                        <div class="skillDiv"><i class="fa-brands fa-css3-alt" title="CSS"></i></div>
+                        <div class="skillDiv"><i class="fa-brands fa-js" title="Javascript"></i></div>
+                        <div class="skillDiv"><i class="fa-brands fa-react" title="ReactJS"></i></div>
+                        <div class="skillDiv"><i class="fa-brands fa-sass" title="SASS"></i></div>
+                        <div class="skillDiv"><i class="fa-brands fa-bootstrap" title="Bootstrap"></i></div>
+                        <div class="skillDiv"><i class="fa-brands fa-node-js" title="NodeJS"></i></div>
+                        <div class="skillDiv"><i class="fa-brands fa-git-alt" title="Git"></i></div>
+                        <div class="skillDiv"><i class="fa-brands fa-figma" title="Figma"></i></div>
+                        <div class="skillDiv"><i class="fa-solid fa-database" title="MySQL"></i></div>
+                        <div class="skillDiv"><i class="fa-solid fa-bone" title="XAMPP"></i></div>
+                        <div class="skillDiv"><i class="fa-solid fa-fire" title="Firebase"></i></div>
+                    </div>
+                    <a href="facebook.com" target="_blank" class="cv">Inspect CV</a>
+                </div>
+                <div class="myPortfolio" id="projects">
+                    <h2>Portfolio</h2>
+                    <div id="projectsFlex">
+                        <div class="projectBox" data-aos="fade-right" data-aos-duration="4000" data-aos-once="true">
+                            <img class="imgCard" src="media/broken-chains.jpg" alt="broken chains">
+                            <div class="cardContent">
+                                <p class="cardText">
+                                    <span class="title">Broken Chains</span><br>
+                                    The objective was to picture the devotion for Harley Davdison motorcycles without losing
+                                    the commercial side of the whole website. This was my first creation, done for practicing and
+                                    learning HTML, CSS and Javascript, apart from other subjects.<br>
+                                    <span class="websiteLink"><a href="https://binaryjuan.github.io/Broken-Chains/" target="_blank">Go to website</a></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="projectBox" data-aos="fade-left" data-aos-duration="4000" data-aos-once="true">
+                            <img class="imgCard" src="media/speedfire.png" alt="speedfire">
+                            <div class="cardContent">
+                                <p class="cardText">
+                                    <span class="title">Speedfire Games</span><br>
+                                    In this case, i used ReactJS to develop a videogame e-commerce. This served to reinforce Javascript and learn
+                                    new technologies.<br>
+                                    <span class="websiteLink"><a href="https://speedfire.vercel.app/" target="_blank">Go to website</a></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="projectBox" data-aos="fade-right" data-aos-duration="4000" data-aos-once="true">
+                            <img class="imgCard" src="media/quinta-silveria.jpg" alt="quinta silveria">
+                            <div class="cardContent">
+                                <p class="cardText">
+                                    <span class="title">Quinta Silveria</span><br>
+                                    This was my first paid job as a freelance website developer for El Salvador. It was made
+                                    for a wedding event facility. For this project, i used the combination of HTML, CSS and
+                                    Javascript to build the website.
+                                    <br>
+                                    <span class="websiteLink"><a href="https://quintasilveria.com/" target="_blank">Go to website</a></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="projectBox" data-aos="fade-left" data-aos-duration="4000" data-aos-once="true">
+                            <img class="imgCard imgCardFit" src="media/minimaljack.png" alt="Minimaljack">
+                            <div class="cardContent">
+                                <p class="cardText">
+                                    <span class="title">Minimal Jack</span><br>
+                                    In this case, i used ReactJS to develop a blackjack videogame with Agustín Dell' Aquila.<br>
+                                    <span class="websiteLink"><a href="#" target="_blank">Go to website</a></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="contact" class="contactMe">
+                    <h2>Contact me</h2>
+                    <form>
+                        <div class="fBox peopleInfo">
+                            <input name="fname" type="text" id="from_name" placeholder="Name" />
+                            <input name="mail" type="email" id="from_email" placeholder="Your email" />
+                        </div>
+                        <div>
+                            <textarea id="message" placeholder="Message"></textarea>
+                        </div>
+                        <input class="sendButton" id="sendForm" name="send" type="submit" value="Send" />
+                    </form>
+                </div>
+                <div id="socials" class="socialsContainer">
+                    <h3>Socials</h3>
+                    <div class="socials">
+                        <div class="social"><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/dante-juan-terranova-2383361a4/" target="_blank">Linkedin</a></div>
+                        <div class="social"><i class="fa-brands fa-github"></i><a href="https://github.com/BinaryJuan" target="_blank">Github</a></div>
+                        <div class="social"><i class="fa-solid fa-envelope"></i><a href="mailto:dante_jterranova463@hotmail.com" target="_blank">Email</a></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Main -->
+        <!-- Scripts -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script src="https://kit.fontawesome.com/f0ed046fae.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init("qgR930k4KgymvNHSI");
+            })();
+        </script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!-- Scripts -->
+    </body>
+    <!-- B O D Y -->
+</html>

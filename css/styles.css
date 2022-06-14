@@ -1,0 +1,684 @@
+@keyframes flicker {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.centerText {
+  text-align: center; }
+
+.bold {
+  font-weight: 600; }
+
+.bolder {
+  font-weight: 800; }
+
+.extra-bold {
+  font-weight: 900; }
+
+.all-width {
+  width: 100%; }
+
+.left {
+  text-align: left; }
+
+.right {
+  text-align: right; }
+
+.light {
+  background-color: #262626; }
+
+.lighter {
+  background-color: #353535; }
+
+@media (max-width: 600px) {
+  nav#navbar {
+    display: none; }
+  nav#navbar li {
+    font-size: 1rem; }
+  img#image {
+    width: 200px;
+    height: 200px; }
+  div#projectsFlex {
+    display: block; }
+  div.projectBox {
+    position: relative;
+    width: 100%;
+    height: auto; }
+  ul.navbarMobContent {
+    visibility: hidden;
+    height: auto;
+    background-color: aliceblue;
+    padding: 15px;
+    border-radius: .7rem;
+    list-style: none;
+    margin-top: 5px;
+    transition: all .4s;
+    opacity: 0; }
+    ul.navbarMobContent li {
+      margin: 7px 0; }
+    ul.navbarMobContent li a {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem; }
+    ul.navbarMobContent li a:hover {
+      color: #9426d4; }
+  div#presentation button {
+    font-size: 1.3rem; }
+  input#menuMod {
+    display: none; }
+  input#menuMod:checked ~ ul.navbarMobContent {
+    visibility: visible;
+    opacity: .8; }
+  nav#navbarMob {
+    display: block;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 999; }
+  .menuModLabel i {
+    font-size: 2.5rem; }
+  div#presentation {
+    margin: 70px auto 0 auto; }
+  div#code-container {
+    padding: 60px 0 0 10px; }
+  div#code {
+    width: 70vw; }
+    div#code p {
+      font-size: 1rem; }
+  #code-container div#flickering {
+    font-size: 1.1rem !important; }
+  div#codeOccupation {
+    font-size: 2rem; }
+  #portfolio {
+    max-height: none !important; }
+  #portfolio .aboutMe p {
+    font-size: 1.3rem;
+    width: 95%; }
+  div.infoGrid {
+    width: 100%;
+    grid-template-columns: 150px 170px; }
+  img.imgCard {
+    height: 200px;
+    min-width: 1px;
+    object-fit: fill; }
+  div.cardContent {
+    width: 100%;
+    height: 200px;
+    border: none;
+    justify-content: flex-start; }
+  p.cardText {
+    font-size: .9rem;
+    border-radius: .7rem;
+    z-index: 888; }
+    p.cardText .title {
+      font-size: 1.4rem; }
+  div.contactMe {
+    width: 100%; }
+  div.contactMe form {
+    width: 100%; }
+  div.fBox.peopleInfo {
+    flex-direction: column;
+    justify-content: center; }
+  div.contactMe input {
+    width: 85%;
+    margin-bottom: 10px; }
+  div.socials {
+    margin-bottom: 100px; }
+  div.social {
+    width: 270px; } }
+
+@media (min-width: 1025px) and (max-width: 1630px) {
+  .contactMe form input {
+    width: 18vw; } }
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  div#presentation {
+    width: 80%; }
+  div#progressBar {
+    height: 7px; }
+  img#image {
+    width: 280px;
+    height: 280px; }
+  div#code {
+    width: 100%;
+    max-width: 600px;
+    min-width: 400px; }
+    div#code p {
+      font-size: 1.3rem; }
+  #code-container div {
+    font-size: 2rem; }
+  #navbar ul li {
+    font-size: 1.2rem; }
+  #portfolio {
+    max-height: none !important; }
+  div.aboutMe p {
+    width: 100%; }
+  div.infoGrid {
+    width: 80%;
+    grid-template-columns: 25vw 35vw; }
+  div.mySkills .skillsFlex .skillDiv {
+    width: 150px;
+    height: 150px; }
+    div.mySkills .skillsFlex .skillDiv i {
+      font-size: 4.5rem; }
+  div.contactMe form {
+    width: 100%; }
+    div.contactMe form textarea {
+      width: 50vw; }
+  div.socials {
+    margin-bottom: 100px; } }
+
+#navbar {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: #2C2C2C;
+  padding-top: 15px; }
+  #navbar ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    user-select: none; }
+  #navbar li {
+    display: inline-flex;
+    text-align: center;
+    margin: 0 15px;
+    font-size: 1.5rem;
+    z-index: 3;
+    cursor: pointer; }
+  #navbar li:last-child {
+    background-color: #9426d4;
+    border-radius: 1rem;
+    padding: 0 20px; }
+  #navbar a {
+    text-decoration: none;
+    color: #E3E3E3; }
+  #navbar a:hover {
+    color: #9426d4; }
+  #navbar .hover-black:hover {
+    color: black; }
+
+#progressBar {
+  width: 100%;
+  height: 10px;
+  background-color: #9426d4; }
+
+/* _____RESET_____ */
+* {
+  margin: 0;
+  padding: 0; }
+
+/* _____RESET_____ */
+::-webkit-scrollbar {
+  display: none; }
+
+html {
+  background-color: #2B2828;
+  color: #BFBFBF;
+  font-family: "Roboto";
+  scroll-behavior: smooth; }
+
+section {
+  width: 100%;
+  text-align: center;
+  margin-top: 60px; }
+
+#navbarMob {
+  display: none; }
+
+#presentation {
+  width: 70%;
+  background-color: #272727;
+  margin: 150px auto 0 auto;
+  padding: 30px;
+  border-radius: 1.3rem;
+  box-shadow: -1px 0px 5px 2px rgba(0, 0, 0, 0.14); }
+  #presentation button {
+    color: #E3E3E3;
+    background-color: #9426d4;
+    border-color: #9426d4;
+    text-shadow: none;
+    height: 60px;
+    width: 170px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    border-style: outset;
+    cursor: pointer;
+    user-select: none; }
+  #presentation button:active {
+    background-color: #8a20c7; }
+
+#image {
+  width: 350px;
+  height: 350px;
+  border-radius: 100%;
+  margin-top: 60px;
+  padding: 3px;
+  user-select: none;
+  transition: all 2s; }
+
+#image:hover {
+  transform: scale(1.03, 1.03); }
+
+#code {
+  margin: 50px auto;
+  width: 50vw;
+  height: 200px;
+  border-radius: 1.3rem;
+  background-color: #2C2C2C;
+  font-weight: bold; }
+  #code p {
+    font-size: 1.5rem;
+    text-align: left; }
+  #code p:last-child {
+    margin-top: 10px; }
+
+#code-container {
+  padding: 60px;
+  user-select: none; }
+  #code-container div#codeName {
+    font-size: 2rem !important; }
+  #code-container div#flickering {
+    font-size: 1.4rem; }
+
+.divSpan {
+  color: #3838f5; }
+
+.divString {
+  color: #9E541B; }
+
+.divClass {
+  color: #70AEFF; }
+
+#flickering {
+  font-size: 1.4rem;
+  text-align: left;
+  animation: flicker 1s infinite; }
+
+#codeOccupation {
+  font-size: 2.5rem;
+  color: #9426d4; }
+
+#portfolio {
+  width: 70%;
+  height: auto;
+  display: none;
+  max-height: 0px;
+  margin: 0 auto;
+  padding: 30px;
+  margin-top: 150px; }
+
+.infoGrid {
+  display: grid;
+  width: 53.4%;
+  justify-content: center;
+  height: auto;
+  margin: 25px auto;
+  grid-template-columns: 15vw 20vw;
+  grid-template-rows: repeat(5, auto);
+  margin-bottom: 80px; }
+
+.infoGridBox {
+  font-weight: bold;
+  color: white;
+  height: auto;
+  padding: 5px 20px;
+  border: 1px solid #464545;
+  font-size: 1rem; }
+
+.aboutMe {
+  text-align: center; }
+  .aboutMe h2 {
+    font-size: 2rem; }
+  .aboutMe p {
+    font-size: 1.5rem;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    line-height: 1.6;
+    margin-bottom: 20px; }
+
+.mySkills {
+  text-align: center; }
+  .mySkills h3 {
+    font-size: 1.6rem; }
+  .mySkills .skillsFlex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    height: auto; }
+  .mySkills i {
+    color: white;
+    font-size: 5rem;
+    cursor: pointer;
+    transition: all .1s; }
+  .mySkills i:hover {
+    font-size: 5.5rem;
+    color: #9426d4; }
+  .mySkills .skillsFlex .skillDiv {
+    background-color: #2C2C2C;
+    width: 180px;
+    height: 180px;
+    border-radius: 1rem;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent; }
+  .mySkills .skillDiv:hover {
+    border: 1px solid #9426d4; }
+  .mySkills .cv {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    padding: 20px 30px;
+    border: 1px solid #9426d4;
+    border-radius: .7rem;
+    position: relative;
+    transition: .5s; }
+  .mySkills .cv:hover {
+    box-shadow: inset 0 0 0 2.5rem #9426d4; }
+
+.myPortfolio {
+  margin-top: 250px; }
+  .myPortfolio h2 {
+    font-size: 2rem; }
+
+#projectsFlex {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  height: auto;
+  margin: 40px auto;
+  flex-wrap: wrap; }
+
+.projectBox {
+  width: 500px;
+  height: 300px;
+  position: relative;
+  margin-bottom: 60px; }
+
+.imgCard {
+  transition: all 0.6s;
+  min-width: 500px;
+  border-radius: .6rem;
+  width: 100%;
+  height: 300px;
+  object-fit: cover; }
+
+.imgCardFit {
+  object-fit: contain; }
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  transition: all 1s;
+  color: white;
+  text-align: center;
+  width: 500px;
+  height: 300px;
+  border: 1px solid white;
+  border-radius: .6rem; }
+
+.cardText {
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: all 0.5s;
+  user-select: none;
+  text-align: center;
+  border-bottom-left-radius: .6rem;
+  border-bottom-right-radius: .6rem; }
+
+.cardContent:hover .cardText {
+  opacity: 0.8;
+  background-color: #9426d4;
+  padding: 20px 0; }
+
+.cardContent:hover {
+  border: 1px solid #9426d4; }
+
+.projectBox:hover .imgCard {
+  opacity: 55%; }
+
+.title {
+  font-size: 1.7rem;
+  font-weight: bold; }
+
+.websiteLink a {
+  color: white;
+  font-weight: bold; }
+
+.websiteLink a:hover {
+  color: #2e2e2e;
+  opacity: 75%; }
+
+#certificatesFlex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70vw;
+  height: auto;
+  margin: 0 auto 40px auto;
+  padding-bottom: 70px; }
+
+.certificateBox {
+  width: 500px;
+  height: 300px;
+  border: 1px solid white;
+  position: relative;
+  margin-top: 60px;
+  transition: all 1s;
+  padding: 2px; }
+
+.infoCheckbox {
+  display: none; }
+
+.infoCheckbox:checked ~ .infoBox {
+  visibility: visible;
+  opacity: 1; }
+
+.infoBox {
+  width: 550px;
+  height: 320px;
+  border: 1px solid #9426d4;
+  background-color: black;
+  position: absolute;
+  z-index: 10;
+  top: -10px;
+  left: -20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.6s; }
+
+.certificateBox img {
+  width: 100%;
+  height: 100%;
+  display: inline-block; }
+
+.certificateBox:hover .openModal {
+  opacity: 100%;
+  visibility: visible;
+  cursor: pointer; }
+
+.openModal:hover {
+  color: black;
+  background-color: white;
+  transition: all 0.3s; }
+
+.certificateBox:hover {
+  border: 1px solid #9426d4;
+  opacity: 75%; }
+
+.infoBoxText {
+  color: white;
+  font-size: 1.3rem;
+  padding: 25px;
+  text-align: center; }
+
+.openCertificate a {
+  color: #9426d4;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-decoration: none; }
+
+.openCertificate a:hover {
+  opacity: 80%; }
+
+.closeInfo {
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 1.1rem;
+  text-decoration: underline; }
+
+.closeInfo:hover {
+  opacity: 80%; }
+
+.mediaContainer {
+  padding-bottom: 40px;
+  height: auto;
+  min-height: 250px;
+  margin-bottom: 100px; }
+
+.openModal {
+  color: white;
+  width: 95px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  background-color: #9426d4;
+  border-radius: 2rem;
+  padding: 5px 10px;
+  position: absolute;
+  text-align: center;
+  right: 1vw;
+  top: 250px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  user-select: none; }
+
+.contactMe h2 {
+  font-size: 2rem; }
+
+.contactMe form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #363636;
+  margin: 0 auto;
+  padding: 40px 0;
+  border-radius: 1.3rem;
+  height: 400px;
+  font-size: 1.3rem;
+  margin-top: 40px; }
+
+.contactMe input {
+  width: 20vw;
+  height: 35px;
+  font-size: 1.3rem;
+  border-radius: .6rem;
+  background-color: #C4C4C4;
+  padding: 0 15px;
+  border: 3px solid transparent; }
+
+.contactMe input::placeholder {
+  font: 1.2rem sans-serif; }
+
+.contactMe input:focus {
+  outline: none;
+  border: 3px solid #9426d4; }
+
+.contactMe .fBox {
+  width: 80%; }
+
+.contactMe .peopleInfo {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; }
+
+.contactMe textarea {
+  width: 43vw;
+  height: auto;
+  min-height: 200px;
+  font-size: 1.2rem;
+  overflow: auto;
+  max-width: 100%;
+  cursor: text;
+  resize: none;
+  border-radius: .6rem;
+  background-color: #C4C4C4;
+  padding: 15px;
+  margin-top: 30px;
+  border: 3px solid transparent; }
+
+.contactMe textarea::placeholder {
+  font: 1.2rem sans-serif; }
+
+.contactMe textarea:focus {
+  outline: none;
+  border: 3px solid #9426d4; }
+
+.contactMe .sendButton {
+  width: 150px;
+  height: 40px;
+  margin: 20px auto 0 auto;
+  cursor: pointer;
+  background-color: #9426d4;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border-radius: .6rem; }
+
+.contactMe .sendButton:active {
+  background-color: #8a20c7; }
+
+.socialsContainer {
+  margin-top: 60px; }
+  .socialsContainer h3 {
+    font-size: 1.6rem;
+    margin-bottom: 30px; }
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 300px; }
+
+.social {
+  background-color: #363636;
+  width: 400px;
+  height: 50px;
+  margin: 5px 0;
+  border-radius: .6rem;
+  transition: all .5s;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 30px; }
+  .social i {
+    font-size: 2rem; }
+  .social a {
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px; }
+
+.social:hover {
+  transform: scale(1.1, 1.1);
+  background-color: #494949; }
