@@ -218,7 +218,7 @@
 html {
   background-color: #2B2828;
   color: #BFBFBF;
-  font-family: "Roboto";
+  font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth; }
 
 section {
