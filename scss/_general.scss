@@ -582,3 +582,10 @@ section {
     transform: scale(1.1, 1.1);
     background-color: $color-grey-lighter;
 }
+
+@media (min-width: 1420px) and (max-width: 1480px) {
+    #projectsFlex {
+        flex-direction: column;
+        align-items: center;
+    }
+}
